@@ -2,6 +2,12 @@
 
 This is a guide for creating LIKHAs using the LIKHA Xcode project found [here](https://github.com/chrisamanse/LIKHA).
 
+This guide is divided into three parts:
+
+1. [Customizing LIKHA](#1-customizing-likha)
+2. [App Store Deployment](#2-app-store-deployment)
+3. [In-App Purchases](#3-in-app-purchases)
+
 ## Setup
 
 Download the LIKHA repo [here](https://github.com/chrisamanse/LIKHA). To start customizing LIKHA, open the `LIKHA.xcworkspace` using Xcode 7.3.1.
