@@ -79,3 +79,40 @@ Download the LIKHA repo [here](https://github.com/chrisamanse/LIKHA). To start c
 
 
 ## 3. In-App Purchases
+
+1. To add In-App Purchases (IAP), go to your app page in iTunes Connect. Click the "+" sign to add an In-App Purchase. Choose a Non-Consumable purchase, since language bundles need only to be purchased once. Input the Reference Name, which will be used for sales reports, and the Product ID, which will be used for fetching IAP items from the app. Choose the Pricing Matrix.
+
+  ![](./Screenshots/Part 3/1.png)
+  
+  ![](./Screenshots/Part 3/2.png)
+  
+  ![](./Screenshots/Part 3/3.png)
+  
+2. In the In-App Purchase Details, add a title and description of the IAP by adding a Language. This will be displayed in the App Store and in the app. Since this app only uses English localization **natively** (it uses UsbongKit for translations), only English language is needed for the IAP description. In the bottom part, you'll also need a screenshot of the IAP in action (the app showing that the IAP being used) for Apple to review it. You can do this later after you add it in your app.
+  
+  ![](./Screenshots/Part 3/4.png)
+  
+  ![](./Screenshots/Part 3/5.png)
+  
+3. To add the IAP in your app, go back to Xcode and edit `LIKHABundles.plist`. An example is already there which you should replace. In the Root item with Dictionary type, add an Array type item with the IAP Product ID as the key, i.e. `com.example.language_bundle`. In the Array, add the languages that this bundle will unlock. Repeat for every IAP item. Finally, test the app if the languages are locked.
+
+  ![](./Screenshots/Part 3/6.png)
+  
+  ![](./Screenshots/Part 3/7.png)
+
+4. To test the purchasing of these items, you'll need to create "Sandbox Users" in iTunes Connect. These users are simply used for testing. Go to iTunes Connect, then Users and Roles to create these Sandbox Users. Make sure to remember the password for these users. To test purchasing, you'll need to run your app in a real device. You can run it by connecting the device in your Mac and choosing the device in Xcode. While in the device, make sure the App Store user is the Sandbox User you created.
+
+  ![](./Screenshots/Part 3/8.png)
+  
+  ![](./Screenshots/Part 3/9.png)
+  
+  ![](./Screenshots/Part 3/10.png)
+  
+  ![](./Screenshots/Part 3/11.png)
+
+5. You can now follow the steps in [App Store Deployment](#2-app-store-deployment) to upload your app to iTunes Connect.
+
+To learn more about distributing apps in the App Store, you can go to the Apple Developer Resources for detailed guides, such as [App Distribution Guide](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/).
+
+
+Copyright (c) 2016 Usbong Social Systems, Inc.
